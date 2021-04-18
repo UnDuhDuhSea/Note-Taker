@@ -1,0 +1,24 @@
+NOTE TAKER
+
+    TASK:
+        - Modify starter code to create an applicatoin called Note Taker that can be used to write and save notes. 
+        - Use Express.js back end. Save and retrieve not data from JSON file. 
+        - Front end already made. Here are the tasks that need to be finished. 
+        
+        **Build the back end**
+        **Connect back end and front end**
+        **Deploy entire app on Heroku**
+    
+Breakdown:
+
+    1. Create db.json file on back end (used to store and retrieve notes using fs module)
+    2. Create these HTML Routes:
+        a. "GET /notes" shold return the "notes.html" file
+        b. "GET *" should return the "index.html" file
+    3. Create these API routes:
+        a. "GET /api/notes" should read the "db.json" file and return all saved notes as JSON
+        b. "POST /api/notes" should receive a note to save on the request body, add it to the "db.json" file,
+            and then return the new note to the client. 
+        c. Will need to find a way to give each note a unique ID when it's saved. 
+
+
