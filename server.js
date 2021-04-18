@@ -18,6 +18,7 @@ app.use(express.static("public"));
 // require("./routes/apiRoutes")(app);
 // require("./routes/htmlRoutes")(app);
 
+app.use(require("./routes/apiRoutes"));
 app.use(require("./routes/htmlRoutes"));
 
 // LISTENER
