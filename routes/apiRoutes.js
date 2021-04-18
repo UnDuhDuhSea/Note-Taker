@@ -20,16 +20,29 @@ router.post("/api/notes", function (req, res) {
     let note = req.body;
     note.id = nanoid();
     notes.push(note);
-    // parse than push and add ID to new notes
-    // console.log(data);
     fs.writeFile("./db/db.json", JSON.stringify(notes), function (err) {
       if (err) throw err;
-      // possibly change notes to req.body
       res.json(notes);
     });
   });
 });
 
 // DELETE
+// router.delete("/api/notes/:id", function (req, res) {
+//   fs.readFile("./db/db.json", "utf8", function (err, data) {
+//     if (err) throw err;
+//     for (let i = 0; i < data.length; i++) {
+//       if (data[i].id == req.params.id) {
+//         // Splice takes i position, and then deletes the 1 note.
+//         data.splice(i, 1);
+//         break;
+//       }
+//     }
+//     fs.writeFile("./db/db.json", JSON.stringify(data), function (err) {
+//       if (err) throw err;
+//       res.json(data);
+//     });
+//   });
+// });
 
 module.exports = router;
